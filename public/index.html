@@ -1,0 +1,78 @@
+<style>
+	.body
+	{
+		margin: auto;
+	    width: 50%;
+	    padding: 10px;
+	}
+	.tab-content
+	{
+		margin: auto;
+	    padding: 10px;
+	    margin-top: 3%;
+	    text-align: center;
+	}
+	ul 
+	{
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	    overflow: hidden;
+	    background-color: #333333;
+	}
+
+	li 
+	{
+	    float: left;
+	}
+
+	li a 
+	{
+	    display: block;
+	    color: white;
+	    text-align: center;
+	    padding: 16px;
+	    text-decoration: none;
+	}
+
+	li a:hover 
+	{
+	    background-color: #111111;
+	}
+</style>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>BMI Calculator</title>
+	<!-- Bootstrap 4 -->
+	<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="body">
+    	<ul>
+		  <li><a href="#standard" id="standard">STANDARD</a></li>
+		  <li><a href="#metric" id="metric">METRIC</a></li>
+		</ul>
+    	<div class="tab-content" id="content">
+    		
+    	</div>
+	</div>
+</body>
+</html>
+<!-- jQuery 3.2.1 -->
+<script src="plugins/jQuery/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("#standard").click(function(){
+        $("#content").load("/standard.html");
+    });
+    $("#metric").click(function(){
+        $("#content").load("/metric.html");
+    });
+});
+</script>

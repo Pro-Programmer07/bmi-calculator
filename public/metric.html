@@ -1,0 +1,54 @@
+<style>
+	input[type=number]
+	{
+    	text-align: center;
+   	}
+   	.row
+   	{
+   		margin-top: 8%;
+   	}
+   	.container
+   	{
+   		border: solid;
+   	}
+</style>
+
+<div class="container">
+	<form class="form">
+		<input type="text" name="type" id="type" value="metric" hidden>
+		<div class="row">
+			<div class="col">
+				<label>Height : </label>
+			</div>
+			<div class="col">
+				<input type="number" name="height" id="height" step="0.1">
+			</div>
+			<div class="col">
+				centimeter
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label>Weight : </label>
+			</div>
+			<div class="col">
+				<input type="number" name="weight" id="weight" step="0.1">
+			</div>
+			<div class="col">
+				kilogram
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-">
+				<button>Compute BMI</button>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-">
+				<strong>BMI result : <label id="result" name="result">0.00</label></strong>
+			</div>
+		</div>
+	</form>
+</div>
+
+<script src="js/BMIController.js"></script>
